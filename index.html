@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boolat <3</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #ffe6f2;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    /* Floating Hearts */
+    .heart {
+      position: fixed;
+      bottom: -10px;
+      color: #ff7aa8;
+      font-size: 24px;
+      animation: floatUp 6s linear infinite;
+      opacity: 0.8;
+      left: calc(10% + (80% * var(--rand-x)));
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(0) scale(1); opacity: 1; }
+      100% { transform: translateY(-120vh) scale(1.8); opacity: 0; }
+    }
+
+    header {
+      background: #ff99cc;
+      padding: 20px;
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      padding: 20px;
+    }
+
+    .gallery img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+
+    .note-section {
+      background: white;
+      margin: 20px;
+      padding: 20px;
+      border-radius: 15px;
+      max-width: 600px;
+      display: inline-block;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+
+    footer {
+      margin-top: 20px;
+      padding: 10px;
+      color: #995c7f;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating hearts script -->
+  <script>
+    setInterval(() => {
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.innerHTML = "💗";
+      heart.style.setProperty("--rand-x", Math.random());
+      heart.style.fontSize = (20 + Math.random() * 25) + "px";
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 6000);
+    }, 500);
+  </script>
+
+  <header>
+    For My Boolat 💕
+  </header>
+
+  <div class="gallery">
+    <img src="pictures/7df326ed-2490-4094-8762-e04cf149a2a0.png" alt="Her Photo">
+    <img src="pictures/8d211e98-c777-4cfb-9d48-947d11c2d501.png" alt="Her Photo">
+    <img src="pictures/35492c41-cefd-4634-b470-f899676bde81.png" alt="Her Photo">
+    <img src="pictures/b56caadb-3ac8-4fdc-9e60-36c594becd0e.png" alt="Her Photo">
+    <img src="pictures/db5e0b85-b0f6-4ff3-9693-21cebcb0c6af.png" alt="Her Photo">
+    <img src="pictures/fa6cddc0-cc72-4aab-8468-d243d581993a.png" alt="Her Photo">
+  </div>
+
+  <div class="note-section">
+    <h2>for my baby poopy!🤍</h2>
+    <p>You make everything brighter just by being here</p>
+    <p>Thank you for being you</p>
+    <p>I love you more than words can explain</p>
+  </div>
+
+  <footer>
+    made for my baby boolat hehehehe 💗
+  </footer>
+
+</body>
+</html>
